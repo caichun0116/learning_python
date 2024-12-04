@@ -15,8 +15,8 @@ class RequesTmethod:
 
     def Requestmethod_post(self, url, json=None, param=None, **kwargs):
         req = requests.post(url,
-                           pjson=json, params=param, **kwargs)
-        # print(req)
+                           json=json, params=param, **kwargs)
+        print(req)
         result = req.json()
         # print(result)
         return result
@@ -26,8 +26,7 @@ get_tmethod = RequesTmethod()
 if __name__ == '__main__':
     param = TotalPath.read_data()['log_pamas']
     url = get_url.get_pytest_login_url()
-    # print(get_tmethod.Requestmethod_post(url, json=param))
+    print(get_tmethod.Requestmethod_post(url, json=param))
 
-    print(get_tmethod.Requestmethod_post(url="http://admin.5istudy.online/code/", json={'mobile': 18000001111}))
+    # print(get_tmethod.Requestmethod_post(url="http://admin.5istudy.online/code", json={'mobile': 18000001111}))
 
-    print(param,url)
