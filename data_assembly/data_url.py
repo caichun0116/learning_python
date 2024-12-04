@@ -16,7 +16,7 @@ class AssemblyURL:
     def get_livetab_url(self, **kwargs):
         return TotalPath.read_config_data()['host']['living_sit_url'] + "/match/global/livingMatchList"
 
-    def get_login_url(self, **kwargs):
+    def get_pytest_login_url(self, **kwargs):
         return TotalPath.read_config_data()['host']['login_sit_url'] + '/code/'
 
 get_url = AssemblyURL()

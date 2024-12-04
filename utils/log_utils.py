@@ -3,7 +3,7 @@ import os
 import logging
 
 currrent_path = os.path.dirname(__file__)
-log_path = os.path.join(currrent_path, '..//logs')
+log_path = os.path.join(currrent_path, '../logs')
 
 
 class LogUtils:
