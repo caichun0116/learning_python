@@ -18,7 +18,9 @@ class AssemblyURL:
 
     def get_pytest_login_url(self, **kwargs):
         return TotalPath.read_config_data()['host']['login_sit_url'] + '/code/'
+    def get_pytest_login1_url(self, **kwargs):
+        return TotalPath.read_config_data()['host']['login_sit_url'] + '/users/'
 
 get_url = AssemblyURL()
 if __name__ == '__main__':
-    print(get_url.get_login_url())
+    print(get_url.get_pytest_login1_url())
