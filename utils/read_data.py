@@ -26,4 +26,4 @@ class file_path:
 TotalPath = file_path()
 
 if __name__ == '__main__':
-    print(TotalPath.read_data())
+    print(TotalPath.read_data()['log_pamas']['mobile'])

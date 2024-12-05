@@ -21,4 +21,4 @@ class AssemblyRequest:
 
 get_request = AssemblyRequest()
 if __name__ == '__main__':
-    print(get_request.get_login_request())
+    print(get_request.get_login_request()['mobile'])
