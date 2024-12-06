@@ -1,0 +1,23 @@
+hero:
+  name: 安其拉
+  Word: 口号
+  hp: 445.5
+
+heros_name:
+  - 安琪拉
+  - 黄总
+  - 小乔
+
+heros_name2:
+  - 安琪拉2
+    黄总2
+heros:
+  - name: 黄总
+    Word: 周日被我射熄火
+    hp: 449
+
+heros_list:
+  - - name: 黄总
+      Word: 周日被我射熄火
+      hp: 449
+
