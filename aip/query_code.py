@@ -11,4 +11,4 @@ def query_code(mobile):
     #print(result)
 
 if __name__ == '__main__':
-    query_code(18211120008)
+    query_code(18000001111)

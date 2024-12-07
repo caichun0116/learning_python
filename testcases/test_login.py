@@ -9,8 +9,8 @@ from utils.log_utils import logger
 
 # 定义测试登录的类
 class TestLogin:
-    # 测试登录的方法
-    @pytest.mark.test
+
+
     def test_login(self):
         # 获取登录的URL和数据
         url, data = login_data()
