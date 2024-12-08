@@ -1,2 +1,11 @@
 log_pamas:
-  mobile: 18211120009
+  mobile: 18000000088
+
+
+login_data:
+  username: 18000000003
+  password: 123456
+
+goods_data:
+  goods: 4
+  nums: 1

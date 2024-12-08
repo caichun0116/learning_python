@@ -77,5 +77,5 @@ if __name__ == '__main__':
     db = MysqlDb()
     # 执行SQL查询一条数据，并打印结果
     result = db.select_db_one(
-        "select code from users_verifycode where mobile = '15000000000' order by id desc limit 1;")
-    print(result['code'])
+        "select code from users_verifycode where mobile ='18000001111' order by id desc limit 1;")
+    print(result)

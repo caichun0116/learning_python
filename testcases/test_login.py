@@ -1,31 +1,24 @@
-# 导入登录所需的数据
 import pytest
 
-from aip.login_data import login_data
-# 导入请求方法工具类
-from utils.Request_method import get_tmethod
-# 导入日志工具类
+from aip.login_api import login_api
 from utils.log_utils import logger
+@pytest.mark.run(order=1)
+def test_login(login_api):
+    print("开始执行登录")
 
-# 定义测试登录的类
-class TestLogin:
+    result=login_api
+    logger.info(f"登录成功返回：{result}")
+    try:
+        if "token" in result:
+            # 这里根据实际期望的token值和格式进行准确的断言，示例中假设token是字符串类型且有特定格式要求
+            token=result["token"]
+            logger.info(f"获取到有效的token: {token}")
+        else:
+            logger.error("登录失败，响应中未包含有效的token")
+    except AssertionError:
+        logger.error("登录失败，响应中未包含有效的token")
 
 
-    def test_login(self):
-        # 获取登录的URL和数据
-        url, data = login_data()
-        try:
-            # 发送POST请求并获取结果
-            result = get_tmethod.Requestmethod_post(url=url, json=data)
-            # 记录登录结果的日志
-            logger.info(f"login_result:{result}")
-        except Exception as e:
-            # 记录登录错误的日志
-            #
-            logger.error(f"login_error:{e}")
 
-# 创建TestLogin类的实例
-login = TestLogin()
-# 如果是主模块，执行登录测试
 if __name__ == '__main__':
-    login.test_login()
+    test_login()

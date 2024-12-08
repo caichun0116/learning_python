@@ -5,21 +5,29 @@ from utils.read_data import TotalPath
 class AssemblyURL:
 
     # 获取体首页url
-    def get_ssport_home_url(self, **kwargs):
+    def get_ssport_home_url(self):
         return TotalPath.read_config_data()['host']['cooperation'] + "/gameHot/top/homepage"
 
     # 获取登录url
-    def get_login_url(self, **kwargs):
+    def get_login_url(self):
         return TotalPath.read_config_data()['host']['api_sit_url'] + "/apis/reglogin/mobile_login.action"
 
     # 获取 直播中url
-    def get_livetab_url(self, **kwargs):
+    def get_livetab_url(self):
         return TotalPath.read_config_data()['host']['living_sit_url'] + "/match/global/livingMatchList"
 
-    def get_pytest_login_url(self, **kwargs):
+    def get_pytest_login_url(self):
         return TotalPath.read_config_data()['host']['login_sit_url'] + '/code/'
-    def get_pytest_login1_url(self, **kwargs):
+
+    def get_pytest_login1_url(self):
         return TotalPath.read_config_data()['host']['login_sit_url'] + '/users/'
+
+    def get_xmlogin_url(self):
+        return TotalPath.read_config_data()['host']['login_sit_url'] + '/login/'
+
+    def get_pytest_goods_url(self):
+        return TotalPath.read_config_data()['host']['login_sit_url'] + '/shopcarts/'
+
 
 get_url = AssemblyURL()
 if __name__ == '__main__':
