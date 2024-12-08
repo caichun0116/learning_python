@@ -1,7 +1,6 @@
 # fixture 缓存：
 # 1.pytest - cache实现缓存
 # 2.cachetools库 缓存
-#验证字体编码
 import pytest
 from data_assembly.data_request import get_request
 from data_assembly.data_url import get_url
